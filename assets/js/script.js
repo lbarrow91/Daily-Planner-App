@@ -9,10 +9,34 @@ var currentHour = (new Date()).getHours();
     $('.timeblock').each(function(){
         var hour = parseInt($(this).attr('data-hour')); 
         if(hour < currentHour){
-            $(this).css('background-color','Grey');
+            $(this).addClass('past');
         }else if(hour === currentHour){
-            $(this).css('background-color','Red');
+            $(this).addClass('present');
         }else {
-            $(this).css('background-color', 'Green');
+            $(this).addClass('future');
         }
     });
+
+//Save input to local storage
+// var inputs = $('<textarea>').text();
+// $('<button>').click(function(event) {
+//     event.preventDefault
+
+// })
+
+// console.log(inputs);
+
+// $('.saveBtn').click(function(event) {
+//     event.preventDefault();
+//     var textInput = $(this).siblings(".textArea").val();
+//     var hourInput = $(this).parent().data("data-hour");
+//     console.log (hourInput, textInput);
+    
+//     var LocalInputs = (textInput, hourInput)
+
+//     localStorage.setItem('inputs', JSON.stringify(LocalInputs));
+// }     
+
+
+// )
+
